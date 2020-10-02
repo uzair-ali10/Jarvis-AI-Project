@@ -5,7 +5,7 @@ import wikipedia
 import webbrowser
 import os
 import time
-
+#sapii5 is an speech to text coverter tool from microsoft
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
@@ -79,7 +79,7 @@ if __name__ == '__main__':
             speak('Hello sir, how may I help you?')
             
         if 'thanks' in query or 'thank you' in query:
-            speak('I am happy I could help you sir')
+            speak('My pleasure, sir')
         
         if "open google" in query:
             webbrowser.open('google.com')
@@ -87,7 +87,7 @@ if __name__ == '__main__':
             strTime=datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir,currently the time is {strTime}")
         if "open pycharm" in query:
-            codePath="C:\\Program Files\\JetBrains\\PyCharm Community Edition 2020.1.1\\bin\\pycharm64.exe"
+            codePath="C:\\Program Files\\JetBrains\\PyCharm Community Edition 2020.1.1\\bin\\pycharm64.exe"  ##<---- THIS PATH IS SET FOR MY COMPUTER, IT MAY DIFFER WITH YOUR'S
             speak(f"Alright sir,opening {query}")
             os.startfile(codePath)
             speak(f"Done!")
@@ -95,6 +95,9 @@ if __name__ == '__main__':
             webbrowser.open('youtube.com')
         if "open gmail" in query:
             webbrowser.open('gmail.com')
+         if "open github" in query:
+            webbrowser.open(guthub.com)
+            
 
         if 'timer' in query or 'stopwatch' in query:
 
