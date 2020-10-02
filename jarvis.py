@@ -4,6 +4,7 @@ import speech_recognition as sr
 import wikipedia
 import webbrowser
 import os
+import time
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -73,6 +74,13 @@ if __name__ == '__main__':
         if 'stop jarvis' in query:
             speak("thanks for your time!,have a nice day!")
             exit()
+            
+        if 'hi' in query or 'hello' in query:
+            speak('Hello sir, how may I help you?')
+            
+        if 'thanks' in query or 'thank you' in query:
+            speak('I am happy I could help you sir')
+        
         if "open google" in query:
             webbrowser.open('google.com')
         if "what time" in query:
@@ -88,6 +96,18 @@ if __name__ == '__main__':
         if "open gmail" in query:
             webbrowser.open('gmail.com')
 
+        if 'timer' in query or 'stopwatch' in query:
 
+            speak("For how many minutes?")
+            waiting_time = takeCommand()
+            waiting_time = waiting_time.replace('minutes', '')
+            waiting_time = waiting_time.replace('minute', '')
+            waiting_time = waiting_time.replace('for', '')
+            waiting_time = float(waiting_time)
+            waiting_time = waiting_time * 60
+            speak(f'I will remind you in {waiting_time} seconds')
+
+            time.sleep(waiting_time)
+            speak('Your time has been finished sir')
 
 
