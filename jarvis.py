@@ -99,18 +99,4 @@ if __name__ == '__main__':
             webbrowser.open(guthub.com)
             
 
-        if 'timer' in query or 'stopwatch' in query:
-
-            speak("For how many minutes?")
-            waiting_time = takeCommand()
-            waiting_time = waiting_time.replace('minutes', '')
-            waiting_time = waiting_time.replace('minute', '')
-            waiting_time = waiting_time.replace('for', '')
-            waiting_time = float(waiting_time)
-            waiting_time = waiting_time * 60
-            speak(f'I will remind you in {waiting_time} seconds')
-
-            time.sleep(waiting_time)
-            speak('Your time has been finished sir')
-
-
+  
