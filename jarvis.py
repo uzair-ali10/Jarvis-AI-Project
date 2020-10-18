@@ -69,5 +69,17 @@ if __name__ == '__main__':
                 speak("According to Wikipedia")
                 print(results)
                 speak(results)"""
+          if 'stop jarvis' in query:
+            speak("thanks for your time!,have a nice day!")
+            exit()
+          if "open google" in query:
+            webbrowser.open('google.com')
+          if "what time" in query:
+            strTime=datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir,currently the time is {strTime}")
+          if "open pycharm" in query:
+            codePath="C:\\Program Files\\JetBrains\\PyCharm Community Edition 2020.1.1\\bin\\pycharm64.exe"
+            
+            ## Updated queries
 
         
