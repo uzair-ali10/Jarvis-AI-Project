@@ -70,24 +70,4 @@ if __name__ == '__main__':
                 print(results)
                 speak(results)"""
 
-        if 'stop jarvis' in query:
-            speak("thanks for your time!,have a nice day!")
-            exit()
-        if "open google" in query:
-            webbrowser.open('google.com')
-        if "what time" in query:
-            strTime=datetime.datetime.now().strftime("%H:%M:%S")
-            speak(f"Sir,currently the time is {strTime}")
-        if "open pycharm" in query:
-            codePath="C:\\Program Files\\JetBrains\\PyCharm Community Edition 2020.1.1\\bin\\pycharm64.exe"
-            speak(f"Alright sir,opening {query}")
-            os.startfile(codePath)
-            speak(f"Done!")
-        if "open youtube" in query:
-            webbrowser.open('youtube.com')
-        if "open gmail" in query:
-            webbrowser.open('gmail.com')
-
-
-
-
+        
